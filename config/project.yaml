@@ -1,0 +1,356 @@
+dateModified: 1589195431
+email:
+  fromEmail: naomi.bennett@me.com
+  fromName: 'Naomi Bennett'
+  replyToEmail: null
+  template: null
+  transportSettings:
+    command: ''
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  f1f706f5-eda8-4b91-8381-1d0622afafbd:
+    name: Content
+  f34f6c01-087c-4353-87f6-cc5c04c084ba:
+    name: Common
+fields:
+  15972644-9e97-442c-9ab7-a67e2c2600c2:
+    contentColumnType: text
+    fieldGroup: f34f6c01-087c-4353-87f6-cc5c04c084ba
+    handle: title_
+    instructions: ''
+    name: Title
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  7f239ea2-2b0c-40dc-a3d4-b4266826d529:
+    contentColumnType: string
+    fieldGroup: f34f6c01-087c-4353-87f6-cc5c04c084ba
+    handle: headerImage
+    instructions: ''
+    name: 'Header Image'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:7bd129d0-e89a-4323-8257-845eebd22bd9'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:7bd129d0-e89a-4323-8257-845eebd22bd9'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  9581062e-2e2b-432e-b54f-753915646bf6:
+    contentColumnType: text
+    fieldGroup: f34f6c01-087c-4353-87f6-cc5c04c084ba
+    handle: body
+    instructions: ''
+    name: Content
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  b4c74959-56a3-48c8-8734-04bd741d1e98:
+    contentColumnType: string
+    fieldGroup: f34f6c01-087c-4353-87f6-cc5c04c084ba
+    handle: contentBuilder
+    instructions: ''
+    name: 'Content Builder'
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_contentbuilder}}'
+      maxBlocks: ''
+      minBlocks: ''
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
+globalSets:
+  1deb554c-b248-4fb1-a27d-90d7c78d4e8c:
+    fieldLayouts:
+      a0e3b8ad-070c-47e9-a1f7-9f8075d534d1:
+        tabs:
+          -
+            fields:
+              7f239ea2-2b0c-40dc-a3d4-b4266826d529:
+                required: true
+                sortOrder: 1
+            name: 'Tab 1'
+            sortOrder: 1
+    handle: siteSettings
+    name: 'Site Settings'
+imageTransforms:
+  4ed73e87-0d47-47e4-ab1d-022a6240a78d:
+    format: null
+    handle: standard
+    height: null
+    interlace: none
+    mode: fit
+    name: Standard
+    position: center-center
+    quality: null
+    width: 2048
+matrixBlockTypes:
+  626d7eb5-7969-4010-bc7d-21c39005214f:
+    field: b4c74959-56a3-48c8-8734-04bd741d1e98
+    fieldLayouts:
+      2d6b4b3b-a4c8-43ad-95ab-080826321544:
+        tabs:
+          -
+            fields:
+              5148bd23-d27b-4684-aabe-cc34e1ab2276:
+                required: false
+                sortOrder: 2
+              608aa032-a7ed-452e-8bfa-c8230e222163:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      5148bd23-d27b-4684-aabe-cc34e1ab2276:
+        contentColumnType: text
+        fieldGroup: null
+        handle: caption
+        instructions: ''
+        name: Caption
+        searchable: true
+        settings:
+          byteLimit: null
+          charLimit: null
+          code: ''
+          columnType: null
+          initialRows: '4'
+          multiline: '1'
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\PlainText
+      608aa032-a7ed-452e-8bfa-c8230e222163:
+        contentColumnType: string
+        fieldGroup: null
+        handle: images
+        instructions: ''
+        name: Images
+        searchable: true
+        settings:
+          allowedKinds:
+            - image
+          defaultUploadLocationSource: 'volume:7bd129d0-e89a-4323-8257-845eebd22bd9'
+          defaultUploadLocationSubpath: ''
+          limit: ''
+          localizeRelations: false
+          restrictFiles: '1'
+          selectionLabel: ''
+          showUnpermittedFiles: false
+          showUnpermittedVolumes: false
+          singleUploadLocationSource: 'volume:7bd129d0-e89a-4323-8257-845eebd22bd9'
+          singleUploadLocationSubpath: ''
+          source: null
+          sources:
+            - 'volume:7bd129d0-e89a-4323-8257-845eebd22bd9'
+          targetSiteId: null
+          useSingleFolder: false
+          validateRelatedElements: ''
+          viewMode: large
+        translationKeyFormat: null
+        translationMethod: site
+        type: craft\fields\Assets
+    handle: imageGallery
+    name: 'Image Gallery'
+    sortOrder: 2
+  7f436974-e246-4f20-98c0-fe03d0bd178d:
+    field: b4c74959-56a3-48c8-8734-04bd741d1e98
+    fieldLayouts:
+      bba4190f-496b-4316-a53f-c790768f5267:
+        tabs:
+          -
+            fields:
+              5d989e7b-2334-45ee-9288-53b36b23eca2:
+                required: true
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      5d989e7b-2334-45ee-9288-53b36b23eca2:
+        contentColumnType: text
+        fieldGroup: null
+        handle: body
+        instructions: ''
+        name: Body
+        searchable: true
+        settings:
+          availableTransforms: '*'
+          availableVolumes: '*'
+          cleanupHtml: true
+          columnType: text
+          purifierConfig: ''
+          purifyHtml: '1'
+          redactorConfig: Standard.json
+          removeEmptyTags: '1'
+          removeInlineStyles: '1'
+          removeNbsp: '1'
+          showUnpermittedFiles: false
+          showUnpermittedVolumes: false
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\redactor\Field
+    handle: copy
+    name: Copy
+    sortOrder: 1
+  fc3f07dd-2a53-4009-94c7-8200cb239395:
+    field: b4c74959-56a3-48c8-8734-04bd741d1e98
+    fieldLayouts:
+      31929f5b-facb-4888-a0c6-b30886e373f3:
+        tabs:
+          -
+            fields:
+              fcd5e2f9-73f3-451b-bfdf-c41b2932dd8f:
+                required: false
+                sortOrder: 1
+            name: Content
+            sortOrder: 1
+    fields:
+      fcd5e2f9-73f3-451b-bfdf-c41b2932dd8f:
+        contentColumnType: string(255)
+        fieldGroup: null
+        handle: video
+        instructions: 'Link to Youtube video.'
+        name: Video
+        searchable: true
+        settings:
+          maxLength: '255'
+          placeholder: ''
+        translationKeyFormat: null
+        translationMethod: none
+        type: craft\fields\Url
+    handle: video
+    name: Video
+    sortOrder: 3
+plugins:
+  code-mirror:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  matrixmate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  oembed:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  splashing-images:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.2.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
+sections:
+  e5216466-fbb2-46cd-8a19-c79b2607e806:
+    enableVersioning: true
+    entryTypes:
+      39f5c56f-25ed-4107-8497-8d40e4d305a6:
+        fieldLayouts:
+          b6585a26-fc89-49ca-a214-18e45de6157e:
+            tabs:
+              -
+                fields:
+                  7f239ea2-2b0c-40dc-a3d4-b4266826d529:
+                    required: false
+                    sortOrder: 1
+                  b4c74959-56a3-48c8-8734-04bd741d1e98:
+                    required: false
+                    sortOrder: 2
+                name: Content
+                sortOrder: 1
+        handle: posts
+        hasTitleField: true
+        name: Posts
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: blog
+    name: Blog
+    previewTargets: null
+    propagationMethod: all
+    siteSettings:
+      17742344-cf82-46c2-8350-f1ae27bca1ab:
+        enabledByDefault: true
+        hasUrls: true
+        template: blog/_entry
+        uriFormat: '{slug}'
+    type: channel
+siteGroups:
+  ce53b9c9-e1ab-46d7-ad05-76b4a5aa58c3:
+    name: 'Naomi Bennett'
+sites:
+  17742344-cf82-46c2-8350-f1ae27bca1ab:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en
+    name: 'Naomi Bennett'
+    primary: true
+    siteGroup: ce53b9c9-e1ab-46d7-ad05-76b4a5aa58c3
+    sortOrder: 1
+system:
+  edition: solo
+  live: true
+  name: 'Naomi Bennett'
+  schemaVersion: 3.4.10
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
+volumes:
+  7bd129d0-e89a-4323-8257-845eebd22bd9:
+    handle: images
+    hasUrls: true
+    name: Images
+    settings:
+      path: assets/images/
+    sortOrder: 1
+    type: craft\volumes\Local
+    url: /assets/images/
