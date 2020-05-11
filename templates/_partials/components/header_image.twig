@@ -1,0 +1,20 @@
+{% if headerImage is defined and headerImage is not null %}
+    {% set imgStyles = "background-image: url('" ~ headerImage.getUrl() ~ "');"|raw %}
+
+    {% if headerImage.hasFocalPoint %}
+        {% set x = headerImage.focalPoint | first * 100 ~ '%' %}
+        {% set y = headerImage.focalPoint | last * 100 ~ '%' %}
+        {% set imgStyles = imgStyles ~ ' background-position: ' ~ [x, y]|join(' ') %}
+    {% endif %}
+    {% set titleStyles = "pb-40" %}
+{% else %}
+    {% set imgStyles = "" %}
+    {% set titleStyles = "pb-4" %}
+{% endif %}
+
+<div class="relative" style="background-color: black; background-repeat: no-repeat; background-size: cover; {{imgStyles}}">
+    <div class="absolute inset-0 bg-opacity-50 bg-black z-0"></div>
+    <h1 class="relative text-white text-2xl tracking-wide uppercase px-4 pt-4 z-10 {{ titleStyles }}">
+        <a href="/">{{ siteSettings.title_ }}</a>
+    </h1>
+</div>

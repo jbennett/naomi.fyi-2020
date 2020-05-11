@@ -1,0 +1,12 @@
+.wysiwyg-formatted hr {
+    background: none; 
+    border-bottom: 1px solid #718096;
+    margin: 2rem auto;
+    width: 50%;
+}
+
+.wysiwyg-formatted p {
+    margin-top: 1rem;
+    text-indent: 2rem;
+}
+

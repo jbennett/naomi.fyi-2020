@@ -1,0 +1,27 @@
+{% extends '_partials/default_layout' %}
+
+{% set headerImage = entry.headerImage.one %}
+
+{% block content %}
+    <div class="max-w-4xl mx-auto pt-12 px-4">
+        {% include '_partials/types/blog_post.twig' %}
+
+        <div class="flex mt-16">
+            {% set next = entry.getNext({section: 'blog', order: 'postDate'}) %}
+            {% if next is not null %}
+                <div>
+                    <div class="font-bold">Newer Post</div>
+                    <div class=""><a href="{{ next.getUrl }}">{{ next.title }}</a></div>
+                </div>
+            {% endif %}
+
+            {% set previous = entry.getPrev({section: 'blog', order: 'postDate'}) %}
+            {% if previous is not null %}
+                <div class="ml-auto text-right">
+                    <div class="font-bold">Older Post</div>
+                    <div class=""><a href="{{ previous.getUrl }}">{{ previous.title }}</a></div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

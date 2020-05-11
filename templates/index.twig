@@ -1,0 +1,20 @@
+{% extends '_partials/default_layout' %}
+ 
+{% set headerImage = siteSettings.headerImage.one %}
+
+{% block content %}
+    {# Create an entry query with the 'section' and 'limit' parameters #}
+    {% set myEntryQuery = craft.entries()
+        .section('blog')
+        .limit(10) %}
+
+    {# Fetch the entries #}
+    {% set entries = myEntryQuery.all() %}
+
+    {# Display the entries #}
+    {% for entry in entries %}
+        <article class="{{ loop.first ? "mt-20" : "mt-40" }} max-w-3xl mx-auto">
+            {% include '_partials/types/blog_post.twig' %}
+        </article>
+    {% endfor %}
+{% endblock %}

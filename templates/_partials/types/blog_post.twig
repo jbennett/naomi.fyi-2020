@@ -1,0 +1,7 @@
+<h1 class="text-6xl text-center font-thin"><a href="{{ entry.url }}">{{ entry.title }}</a></h1>
+<div class="text-center text-gray-600">
+    {{ entry.author }}
+    ·
+    {{ entry.postDate | date('F j, Y') }}
+</div>
+<div class="wysiwyg-formatted">{{ entry.body }}</div>
