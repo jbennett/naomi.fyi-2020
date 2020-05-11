@@ -7,7 +7,7 @@
         {% include '_partials/types/blog_post.twig' %}
 
         <div class="flex mt-16">
-            {% set next = entry.getNext({section: 'blog', order: 'postDate'}) %}
+            {% set next = entry.getNext({section: 'blog', orderBy: 'postDate'}) %}
             {% if next is not null %}
                 <div>
                     <div class="font-bold">Newer Post</div>
@@ -15,7 +15,7 @@
                 </div>
             {% endif %}
 
-            {% set previous = entry.getPrev({section: 'blog', order: 'postDate'}) %}
+            {% set previous = entry.getPrev({section: 'blog', orderBy: 'postDate'}) %}
             {% if previous is not null %}
                 <div class="ml-auto text-right">
                     <div class="font-bold">Older Post</div>

@@ -1,0 +1,7 @@
+
+{% set blocks = field.all() %}
+{% if blocks | length %}
+    {% for block in blocks %}
+        {% include '_partials/blocks/' ~ block.type with { 'field': block } %}
+    {% endfor %}
+{% endif %}

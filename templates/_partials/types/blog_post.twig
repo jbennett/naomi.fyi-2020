@@ -4,4 +4,5 @@
     ·
     {{ entry.postDate | date('F j, Y') }}
 </div>
-<div class="wysiwyg-formatted">{{ entry.body }}</div>
+
+{% include '_partials/fields/content_builder' with { 'field': entry.contentBuilder } %}
