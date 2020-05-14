@@ -14,13 +14,13 @@ root_path = '/var/www/html/naomi.fyi'
 
 def quickDeploy():
   updateCode()
-  updateAssets()
+  # updateAssets()
   setOwnership()
 
 def fullDeploy():
   updateCode()
   updateDeps()
-  updateAssets()
+  # updateAssets()
   setOwnership()
 
 def updateCode():
@@ -34,7 +34,7 @@ def updateAssets():
 def updateDeps():
   with cd(root_path):
     run('composer install')
-    run('npm install')
+    # run('npm install')
 
 def setOwnership():
   with cd(root_path):
