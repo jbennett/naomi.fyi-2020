@@ -1,10 +1,10 @@
 {% extends '_partials/default_layout' %}
  
 {% set headerImage = siteSettings.headerImage.one %}
+{% paginate craft.entries().section('blog').limit(10) as pageInfo, entries %}
+{% set browserTitle = (pageInfo.currentPage == 1) ? "" : "Page " ~ pageInfo.currentPage %}
 
 {% block content %}
-
-    {% paginate craft.entries().section('blog').limit(10) as pageInfo, entries %}
     {% for entry in entries %}
         <article class="{{ loop.first ? "mt-20" : "mt-40" }} max-w-3xl mx-auto">
             {% include '_partials/types/blog_post.twig' %}
