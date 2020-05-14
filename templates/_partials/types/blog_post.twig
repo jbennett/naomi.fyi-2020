@@ -3,6 +3,11 @@
     {{ entry.author }}
     ·
     {{ entry.postDate | date('F j, Y') }}
+
+    {% if currentUser %}
+        ·
+        <a href="{{ entry.cpEditUrl }}" target="_blank">Edit this entry</a>
+    {% endif %}
 </div>
 
 {% include '_partials/fields/content_builder' with { 'field': entry.contentBuilder } %}
