@@ -3,18 +3,30 @@
 {% set headerImage = siteSettings.headerImage.one %}
 
 {% block content %}
-    {# Create an entry query with the 'section' and 'limit' parameters #}
-    {% set myEntryQuery = craft.entries()
-        .section('blog')
-        .limit(10) %}
 
-    {# Fetch the entries #}
-    {% set entries = myEntryQuery.all() %}
-
-    {# Display the entries #}
+    {% paginate craft.entries().section('blog').limit(10) as pageInfo, entries %}
     {% for entry in entries %}
         <article class="{{ loop.first ? "mt-20" : "mt-40" }} max-w-3xl mx-auto">
             {% include '_partials/types/blog_post.twig' %}
         </article>
     {% endfor %}
+
+    <div class="flex justify-center mt-16">
+        {% set linkStyle = "inline-block text-gray-900 border-2 hover:border-gray-500 px-3 py-1 mr-2" %}
+
+        <a href="{{ pageInfo.firstUrl }}" class="{{ linkStyle }}">First Page</a>
+        {% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}" class="{{ linkStyle }}">Previous Page</a>{% endif %}
+        
+        {% for page, url in pageInfo.getPrevUrls(5) %}
+            <a href="{{ url }}" class="{{ linkStyle }}">{{ page }}</a>
+        {% endfor %}
+
+        <span class="current border-gray-500 {{ linkStyle }}">{{ pageInfo.currentPage }}</span>
+
+        {% for page, url in pageInfo.getNextUrls(5) %}
+            <a href="{{ url }}" class="{{ linkStyle }}">{{ page }}</a>
+        {% endfor %}
+        {% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}" class="{{ linkStyle }}">Next Page</a>{% endif %}
+        <a href="{{ pageInfo.lastUrl }}" class="{{ linkStyle }}">Last Page</a>
+    </div>
 {% endblock %}
