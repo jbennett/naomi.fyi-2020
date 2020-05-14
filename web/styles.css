@@ -1,3 +1,7 @@
+.wysiwyg-formatted figure {
+    margin-top: 1rem;
+}
+
 .wysiwyg-formatted hr {
     background: none; 
     border-bottom: 1px solid #718096;
