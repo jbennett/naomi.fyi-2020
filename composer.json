@@ -19,10 +19,10 @@
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
-    "craftcms/cms": "3.4.19.1",
+    "craftcms/cms": "3.4.22.1",
     "vlucas/phpdotenv": "^3.4.0",
     "craftcms/redactor": "2.6.1",
-    "verbb/super-table": "2.4.9",
+    "verbb/super-table": "2.5.0",
     "luwes/craft3-codemirror": "1.0.2",
     "vaersaagod/matrixmate": "1.2.5",
     "studioespresso/craft-splashingimages": "2.0.0",
