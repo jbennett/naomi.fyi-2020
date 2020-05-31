@@ -1,4 +1,4 @@
-dateModified: 1589195431
+dateModified: 1590894585
 email:
   fromEmail: naomi.bennett@me.com
   fromName: 'Naomi Bennett'
@@ -27,6 +27,24 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  2bf8fcbc-bb9c-49e0-81e2-4812f80b3a22:
+    contentColumnType: text
+    fieldGroup: f34f6c01-087c-4353-87f6-cc5c04c084ba
+    handle: newsletterEmbed
+    instructions: ''
+    name: 'Newsletter embed'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: '1'
+      columnType: null
+      initialRows: '6'
+      multiline: '1'
       placeholder: ''
     translationKeyFormat: null
     translationMethod: none
@@ -105,6 +123,9 @@ globalSets:
         tabs:
           -
             fields:
+              2bf8fcbc-bb9c-49e0-81e2-4812f80b3a22:
+                required: false
+                sortOrder: 2
               7f239ea2-2b0c-40dc-a3d4-b4266826d529:
                 required: true
                 sortOrder: 1
